@@ -10,10 +10,12 @@ const symbolsCheckboxEl = document.getElementById('symbols-check');
 const generateBtnEl = document.getElementById('generate-btn');
 const passwordLevel = document.querySelector('.password-level');
 const passwordShowEl = document.querySelector('.pass');
+const copyBtnEl = document.querySelector('.copy-btn');
 let levels = document.getElementsByClassName('level');
 
 let passwordLength = Number(lengthOutputElement.textContent);
 let strengthLevel = 0;
+let generatedPassword = '';
 
 const uppercase = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
 const lowercase = 'abcdefghijklmnopqrstuvwxyz';
@@ -105,7 +107,7 @@ const isChecked = function (element) {
 };
 
 const passwordGenerator = function (length) {
-  let generatedPassword = '';
+  generatedPassword = '';
   while (generatedPassword.length < length) {
     randomChoice = Math.floor(Math.random() * 4) + 1;
     switch (randomChoice) {
@@ -140,4 +142,11 @@ const passwordGenerator = function (length) {
 
 generateBtnEl.addEventListener('click', () => {
   passwordGenerator(passwordLength);
+});
+
+// Copy to clipboard
+copyBtnEl.addEventListener('click', () => {
+  navigator.clipboard.writeText(generatedPassword).then(() => {
+    alert('Copied to clipboard');
+  });
 });
