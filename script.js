@@ -7,8 +7,8 @@ const upperCheckboxEl = document.getElementById('upper-check');
 const lowerCheckboxEl = document.getElementById('lower-check');
 const numbersCheckboxEl = document.getElementById('numbers-check');
 const symbolsCheckboxEl = document.getElementById('symbols-check');
+const passwordLevel = document.querySelector('.password-level');
 let levels = document.getElementsByClassName('level');
-console.log(levels);
 
 let passwordLength = Number(lengthOutputElement.textContent);
 let strengthLevel = 0;
@@ -60,28 +60,32 @@ const showStrengthLevel = function (strength) {
   switch (strength) {
     case 0:
       clearStrengthLevel();
+      passwordLevel.innerHTML = 'EASY';
       break;
     case 1:
       clearStrengthLevel();
       levels[0].classList.add('active');
+      passwordLevel.innerHTML = 'EASY';
       break;
     case 2:
       clearStrengthLevel();
       for (let i = 0; i < strength; i++) {
         levels[i].classList.add('active');
       }
+      passwordLevel.innerHTML = 'MEDIUM';
       break;
     case 3:
       clearStrengthLevel();
       for (let i = 0; i < strength; i++) {
         levels[i].classList.add('active');
       }
-
+      passwordLevel.innerHTML = 'MEDIUM';
       break;
     case 4:
       for (let i = 0; i < levels.length; i++) {
         levels[i].classList.add('active');
       }
+      passwordLevel.innerHTML = 'HARD';
       break;
   }
 };
