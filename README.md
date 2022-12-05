@@ -1,5 +1,7 @@
 # Password Generator
 
+![My Image](PassGenerator.png)
+
 ## Features
 
 - Generate a password based on the selected inclusion options
