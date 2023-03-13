@@ -11,47 +11,49 @@
   <body>
     <div class="container">
       <h1 class="title">password generator</h1>
-      <div class="password-output">
-        <p class="pass">Here is your password...</p>
-        <button class="copy-btn">
-          <span class="material-symbols-outlined"> content_copy </span>
-        </button>
-      </div>
-      <div class="password-settings">
-        <div class="password-size">
-          <p>Password Length:</p>
-          <div class="length">
-            <button id="minus" role="button">-</button>
-            <span id="length-output">1</span>
-            <button id="plus" role="button">+</button>
+      <div class="boxes">
+        <div class="password-output">
+          <p class="pass">Here is your password...</p>
+          <button class="copy-btn">
+            <span class="material-symbols-outlined"> content_copy </span>
+          </button>
+        </div>
+        <div class="password-settings">
+          <div class="password-size">
+            <p>Password Length:</p>
+            <div class="length">
+              <button id="minus" role="button">-</button>
+              <span id="length-output">1</span>
+              <button id="plus" role="button">+</button>
+            </div>
           </div>
-        </div>
-        <div class="check">
-          <input type="checkbox" id="upper-check" name="upper-check" />
-          <label for="upper-check">include Uppercase Letters</label>
-        </div>
-        <div class="check">
-          <input type="checkbox" id="lower-check" name="lower-check" />
-          <label for="lower-check">include Lowercase Letters</label>
-        </div>
-        <div class="check">
-          <input type="checkbox" id="numbers-check" name="numbers-check" />
-          <label for="numbers-check">include Numbers</label>
-        </div>
-        <div class="check">
-          <input type="checkbox" id="symbols-check" name="symbols-check" />
-          <label for="symbols-check">include Symbols</label>
-        </div>
-        <div class="strength-container">
-          <span class="password-level">EASY</span>
-          <div class="visual-level">
-            <div class="level"></div>
-            <div class="level"></div>
-            <div class="level"></div>
-            <div class="level"></div>
+          <div class="check">
+            <input type="checkbox" id="upper-check" name="upper-check" />
+            <label for="upper-check">include Uppercase Letters</label>
           </div>
+          <div class="check">
+            <input type="checkbox" id="lower-check" name="lower-check" />
+            <label for="lower-check">include Lowercase Letters</label>
+          </div>
+          <div class="check">
+            <input type="checkbox" id="numbers-check" name="numbers-check" />
+            <label for="numbers-check">include Numbers</label>
+          </div>
+          <div class="check">
+            <input type="checkbox" id="symbols-check" name="symbols-check" />
+            <label for="symbols-check">include Symbols</label>
+          </div>
+          <div class="strength-container">
+            <span class="password-level">EASY</span>
+            <div class="visual-level">
+              <div class="level"></div>
+              <div class="level"></div>
+              <div class="level"></div>
+              <div class="level"></div>
+            </div>
+          </div>
+          <button role="button" id="generate-btn">GENERATE</button>
         </div>
-        <button role="button" id="generate-btn">GENERATE</button>
       </div>
     </div>
   </body>
